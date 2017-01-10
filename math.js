@@ -18,6 +18,12 @@ const fibonacciLoop = (n) => {
   return fibos[n];
 };
 
+// This converts the Fibonacci function from a synchronous function to an asynchronous
+// function one with a callback.
+// Using setImmediate, each stage of the calculation is managed through Node.js's
+// event loop and the server can easily handle other requests while churning away
+// on a calculation. It does nothing to reduce the computation required; this is still the silly,
+// inefficient Fibonacci algorithm. All we've done is spread the computation through the event loop.
 const fibonacciAsync = (n, done) => {
   if (n === 0) {
     done(undefined, 0);
