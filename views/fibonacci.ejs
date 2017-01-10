@@ -1,0 +1,13 @@
+<% include header %>
+
+<% if (typeof fiboval !== "undefined") { %>
+<p>Fibonacci value for <%= fibonum %> is <%= fiboval %></p>
+<% } %>
+
+<p>Enter a number to see it's Fibonacci number</p>
+<form action="/fibonacci" name="fibonacci" method="get">
+  <input type="text" name="fibonum" />
+  <input type="submit" value="Submit" />
+</form>
+
+<% include footer %>
