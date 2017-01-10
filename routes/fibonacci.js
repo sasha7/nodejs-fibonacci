@@ -15,7 +15,7 @@ router.get('/', (req, res, next) => {
     res.render('fibonacci', {
       title: 'Calculate Fibonacci numbers',
       fibonum: parsedInput,
-      fiboval: math.fibonacci(parsedInput)
+      fiboval: math.fibonacciLoop(parsedInput)
     });
   } else {
     res.render('fibonacci', {
