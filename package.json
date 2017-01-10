@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=fibonacci:* node ./bin/www",
-    "watch": "DEBUG=fibonacci:* nodemon ./bin/www"
+    "start": "SERVERPORT=3002 DEBUG=fibonacci:* node ./bin/www",
+    "watch": "SERVERPORT=3002 DEBUG=fibonacci:* nodemon ./bin/www",
+    "fiboserver": "SERVERPORT=3002 node ./fiboserver.js --max_old_space_size 500",
+    "fiboclient": "node ./fiboclient.js"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
